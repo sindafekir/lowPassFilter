@@ -1,4 +1,6 @@
 function [filtData] = FftRft(trace,FPS,sigmaf)
+%% trace = input signal; FPS = frames per second; sigmaf = width of your filter 
+
     X = fft(trace); 
     X2sided = abs(X); %this gives you the 2 sided FT 
     X1sided = X2sided(1:length(X2sided)/2); % the one sided FT 
